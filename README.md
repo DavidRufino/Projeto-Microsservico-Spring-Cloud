@@ -1,5 +1,11 @@
 
 
+Os arquivos para testar esta aplicação, estão contidos na pasta: **TEST RESTful**, com arquivos de formato: **http** localizado no repositório: **[Dicas de Projeto Arquitetura Microsserviço usando Spring Cloud](https://github.com/DavidRufino/Minhas-Anotacoes-Santander-Bootcamp/tree/master/11%20Dicas%20de%20Projeto%20Arquitetura%20microservico%20usando%20Spring%20Cloud)**
+
+Igualmente com as [Dicas e Comandos aprendidos na aula](https://github.com/DavidRufino/Minhas-Anotacoes-Santander-Bootcamp/blob/master/11%20Dicas%20de%20Projeto%20Arquitetura%20microservico%20usando%20Spring%20Cloud/00%20Dicas%20de%20Spring%20Cloud.md)
+
+
+
 # Observações
 
 Teve que ser feito **Downgrade** do *Spring Boot Framework* e *Elasticsearch*:
