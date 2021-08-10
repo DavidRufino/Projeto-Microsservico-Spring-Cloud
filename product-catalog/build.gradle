@@ -35,6 +35,9 @@ dependencies {
 	// Spring Clound Config Client
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
 
+	//	Eureka Client
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
