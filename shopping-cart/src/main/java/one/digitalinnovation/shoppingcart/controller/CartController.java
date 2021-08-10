@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(value = "/api/v1/cart")
+@RequestMapping("/cart")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class CartController {
 
