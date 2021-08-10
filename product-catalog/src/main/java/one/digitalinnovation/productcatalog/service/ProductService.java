@@ -16,24 +16,26 @@ public class ProductService {
 
     public MessageResponseDTO create(Product product) {
         var result = productRepository.save(product);
-        return createMessageResponse(("Created " + result));
+
+        return createMessageResponse(("Created Product Name: " + result.getName()), result);
     }
 
-    public MessageResponseDTO findById(Long IdProduct) throws ProductNotFoundException {
-        var result = verifyIfExists(IdProduct);
+    public MessageResponseDTO findById(Long idProduct) throws ProductNotFoundException {
+        var result = verifyIfExists(idProduct);
 
-        return createMessageResponse(("Found " + result));
+        return createMessageResponse(("Found Product ID: " + idProduct), result);
     }
 
-    private Product verifyIfExists(Long IdProduct) throws ProductNotFoundException {
-        return productRepository.findById(IdProduct)
-                .orElseThrow(() -> new ProductNotFoundException(IdProduct));
+    private Product verifyIfExists(Long idProduct) throws ProductNotFoundException {
+        return productRepository.findById(idProduct)
+                .orElseThrow(() -> new ProductNotFoundException(idProduct));
     }
 
-    private MessageResponseDTO createMessageResponse(String msg) {
+    private MessageResponseDTO createMessageResponse(String msg, Product product) {
         return MessageResponseDTO
                 .builder()
                 .message(msg)
+                .object(product)
                 .build();
     }
 }
